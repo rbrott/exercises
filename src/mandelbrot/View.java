@@ -9,9 +9,9 @@ public class View extends JFrame {
 	Model model;
 	
 	public View() {
-		setSize(750, 750);
+		setSize(1000, 1000);
 		setTitle("Mandelbrot Set");
-		model = new Model(750, 750);
+		model = new Model(1000, 1000);
 		add(model);
 		addMouseListener(model);
 		addKeyListener(model);

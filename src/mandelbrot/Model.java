@@ -30,7 +30,7 @@ public class Model extends JPanel implements KeyListener, MouseListener {
 	private int calculateNum(int x, int y) {
 		Complex complex = new Complex(((x - (double) width / 2) + cx) / zoom, (((double) height / 2 - y) + cy) / zoom);
 		Complex result = new Complex(complex);
-		for(int k = 0; k < 100; k++) {
+		for(int k = 0; k < 200; k++) {
 			result = result.multiply(result).add(complex);
 			if(Math.abs(result.getImag()) > 2.0 || Math.abs(result.getReal()) > 2.0) {
 				return k + 1;
@@ -69,9 +69,13 @@ public class Model extends JPanel implements KeyListener, MouseListener {
 		switch(button) {
 		case MouseEvent.BUTTON1:
 			zoom *= 2.0;
+			cx *= 2.0;
+			cy *= 2.0;
 			break;
 		case MouseEvent.BUTTON3:
 			zoom /= 2.0;
+			cx /= 2.0;
+			cy /= 2.0;
 			break;
 		}
 		calculateSet();
