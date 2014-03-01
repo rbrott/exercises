@@ -1,19 +1,17 @@
 package gobblet;
 
-import java.awt.Graphics2D;
-
 public class UserPlayer implements Player {
+	
+	public int color;
+
+	public UserPlayer(int color) {
+		// TODO Auto-generated constructor stub
+		this.color = color;
+	}
 
 	@Override
 	public void update(long delta) {
 		// TODO Auto-generated method stub
 		
 	}
-
-	@Override
-	public void paint(Graphics2D g2d) {
-		// TODO Auto-generated method stub
-		
-	}
-
 }
